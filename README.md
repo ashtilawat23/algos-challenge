@@ -1,6 +1,6 @@
 # Algos Challenge
 
-The `challenge` folder houses all the problems we have covered in the challenge. Each problem has it's own folder. 
+The `challenge` folder has all the challenge problems. Each problem has it's own folder for its solutions. 
 
 To participate, inside each problem folder:
 
@@ -11,7 +11,7 @@ To participate, inside each problem folder:
     5. Make a pull request on this repo. 
 
 Please remember to:
- 
+
     - Not edit any other file but you own. 
     - Submit your own work and not use another's code.
 
