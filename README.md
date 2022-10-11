@@ -13,7 +13,7 @@ To participate, inside each problem folder:
 
 Please remember to:
 
-    - Not edit any other file but you own. 
+    - Not edit any other file but your own. 
     - Submit your own work and not use another's code.
 
 ### The best solutions will be merged and submitted into the challenge!  
