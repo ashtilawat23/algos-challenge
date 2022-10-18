@@ -2,7 +2,7 @@ var mergeTwoLists = function(l1, l2) {
     //create a new linked list to return
     //use 2 pointers for both l1,l2
     //pointer for ans list 
-    let ans = new ListNode()
+    let ans = new ListNode() 
     let current = ans
 
     while(l1&&l2){ //while loop to continue until 1 list becomes null
