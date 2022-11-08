@@ -1,17 +1,27 @@
-var isValid = function(s) {
-    //use stack to track brackets coming in, if left bracket push otherwise check if it is the corresponding bracket and pop()
-    //declare stack variable
-    //for loop for s, check if left brackets, otherwise check if opposite bracket
-    //return stack.length === 0 if valid string
-    if(s.length % 2 !== 0)return false
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+ var isValid = function(s) {
+    //have check for string length if it is odd, return false immediately as each opening parentheses needs a closing parantheses and if length is odd, there's no way to close all 
+    if(s.length%2) return false
+    //define stack to store in opening parentheses and popped to compare
     let stack = []
-    for(let i=0;i<s.length;i++){
-        if(s[i] === ')' || s[i] === ']' || s[i] === '}'){
-            let check = stack.pop()
-            if(s[i]===')' && check !== '(' || s[i]===']' && check !== '[' || s[i]==='}' && check !== '{') return false
+    //define dict to facilitate additonals inputs other than parentheses
+    let dict = {
+        '(':')',
+        '[':']',
+        '{':'}'
+    }
+    //Check through the length of the string
+    for(let char of s){
+        if(dict[char]){
+            stack.push(char)
         }else{
-            stack.push(s[i])
+            let check = dict[stack.pop()]
+            if(check!==char)return false
         }
     }
-    return stack.length === 0
+    return stack.length===0
+    //Time:O(n) due to length of string, space: O(n) due to length of string
 };
