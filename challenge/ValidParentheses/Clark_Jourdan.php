@@ -1,5 +1,4 @@
 class Solution {
-
     private $regex = "/^(?'recurse'(?P>notbracket)|(?P>parenth)|(?P>square)|(?P>curly))*+$(?>(?'notbracket'[^]})({[]++)(?'parenth'\((?P>recurse)*+\))(?'square'\[(?P>recurse)*+\])(?'curly'\{(?P>recurse)*+\}))?+/s";
 
     /**
